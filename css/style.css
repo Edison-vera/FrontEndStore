@@ -200,7 +200,7 @@ h3 {
 
 .nosotros {
     display: grid;
-    grid-template-rows: (2, 1fr);
+    grid-template-rows: (2, auto);
 }
 
 @media (min-width: 768px) {
@@ -215,6 +215,11 @@ h3 {
 
 .nosotros__imagen {
     grid-row: 1 / 2;
+    width: 100%;
 }
 
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
+    .nosotros__imagen {
+        grid-column: 2 / 3;
+    }
+}
